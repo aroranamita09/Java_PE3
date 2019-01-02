@@ -9,24 +9,26 @@ public class MatrixAddition {
         System.out.println("Enter the number of coumns");
         int c=sc.nextInt();
         int [][]arr=new int [r][c];
-        for(int )
-
-    }
-    public []Integer addMatrix(Integer first[][],int p,int q)
-    {
-        int result[]=new int[q];
-        for(int i=0;i<p;i++)
-
-            for(int j=0;j<q;j++)
+        for(int i=0;i<r;i++)
+            for(int j=0;j<c;j++)
             {
-                result=sum(first[i][j],first[i+1][j]);
+                arr[i][j]=sc.nextInt();
             }
 
     }
-
-    private int sum(Integer integer, Integer integer1) {
-        Integer num=integer+integer1;
-        return num;
+    public Integer[] addMatrix(Integer first[],Integer second[],int r,int c)
+    {
+        Integer result[]=new Integer[r];
+        for(int i=0;i<r;i++)
+            for(int j=0;j<c;j++)
+            {
+                result[i]=first[i][j]+first[i+1][j];
+            }return result;
     }
 }
 
+/**
+ private int sum(Integer integer, Integer integer1) {
+ Integer num=integer+integer1;
+ return num;
+ }**/
